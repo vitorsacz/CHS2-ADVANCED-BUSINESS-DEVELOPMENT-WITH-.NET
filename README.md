@@ -9,6 +9,29 @@ Entrega sprint2 grupo Vikeze - PrevDent
 - **José Ribeiro dos Santos Neto** - RM553844  
 
 ## Definição do Projeto
+
+# PrevDent Repository
+
+## Descrição
+O **PrevDent Repository** é uma aplicação desenvolvida em .NET 8.0, utilizando o padrão MVC, que visa facilitar o cadastro e a gestão de dentistas. O sistema permite que os usuários registrem, editem e visualizem detalhes de dentistas, promovendo uma interface intuitiva e acessível.
+
+## Funcionalidades
+- Cadastro de dentistas com informações como Nome, CRO, Email e CPF.
+- Edição e atualização dos detalhes dos dentistas.
+- Exclusão de registros de dentistas.
+- Visualização de uma lista de dentistas cadastrados.
+- Validação de dados para garantir a integridade das informações.
+
+## Tecnologias Utilizadas
+- **.NET 8.0**: Plataforma de desenvolvimento para a construção de aplicações web.
+- **ASP.NET Core MVC**: Estrutura para criar aplicações web baseadas no padrão Model-View-Controller.
+- **Entity Framework Core**: ORM (Object-Relational Mapper) para interagir com o banco de dados.
+- **Migrations**: Para gerenciar e aplicar alterações no esquema do banco de dados de forma controlada.
+- **Bootstrap**: Para estilização e layout responsivo da interface do usuário.
+
+
+
+
 ### Objetivo do Projeto:
 O PrevDent tem como objetivos principais:
 
