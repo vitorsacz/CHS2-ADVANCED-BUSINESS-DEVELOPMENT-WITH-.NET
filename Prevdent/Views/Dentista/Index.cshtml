@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Prevdent.Domain.Entities.DentistaEntity>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dentistas - PrevDent Repository</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #f5f9ff; 
+            color: #333;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff; 
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff; 
+        }
+
+        .table th {
+            background-color: #007bff; 
+            color: white; 
+        }
+
+        .btn-info { background-color: #17a2b8; } 
+        .btn-warning { background-color: #ffc107; } 
+        .btn-danger { background-color: #dc3545; } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Dentistas</h2>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>CRO</th>
+                    <th>E-MAIL</th>
+                    <th>CPF</th>
+                    <th>AÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CRO)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CPF)</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.UsuarioId" class="btn btn-sm btn-info">Detalhes</a>
+                            <a asp-action="Edit" asp-route-id="@item.UsuarioId" class="btn btn-sm btn-warning">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.UsuarioId" class="btn btn-sm btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <a asp-action="Create" class="btn btn-primary mb-3">Adicionar Novo Dentista</a>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

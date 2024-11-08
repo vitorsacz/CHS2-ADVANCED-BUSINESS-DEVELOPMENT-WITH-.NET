@@ -1,0 +1,61 @@
+﻿@model Prevdent.Domain.Entities.DentistaEntity
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Detalhes do Dentista</h3>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 font-weight-bold">@Html.DisplayNameFor(model => model.Nome)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Nome)</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">@Html.DisplayNameFor(model => model.CRO)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.CRO)</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">@Html.DisplayNameFor(model => model.Email)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">@Html.DisplayNameFor(model => model.CPF)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.CPF)</dd>
+                    </dl>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-secondary">Voltar à Lista</a>
+                    <a asp-action="Edit" asp-route-id="@Model.UsuarioId" class="btn btn-primary">Editar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f5f9ff;
+        color: #333;
+    }
+
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-header {
+        background-color: #007bff;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+    dt {
+        color: #007bff;
+    }
+</style>
